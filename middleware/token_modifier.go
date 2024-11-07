@@ -97,7 +97,7 @@ func process(buf []byte) {
 			}
 			token := jsonObject.Get("token")
 			f, _ := token.Bytes()
-			tokenAliases[string(originalToken)] = f //拿到现在的 token 值用来替换掉过去的 token 值
+			tokenAliases[string(originalToken)] = f
 			Debug("Create alias for new token token, was:", string(originalToken), "now:", string(f))
 		}
 	}
